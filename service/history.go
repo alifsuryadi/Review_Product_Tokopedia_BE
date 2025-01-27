@@ -4,9 +4,9 @@ import (
 	"context"
 	"math"
 
-	"ulascan-be/dto"
-	"ulascan-be/entity"
-	"ulascan-be/repository"
+	"review_product_tokopedia_be/dto"
+	"review_product_tokopedia_be/entity"
+	"review_product_tokopedia_be/repository"
 )
 
 type (
@@ -117,3 +117,4 @@ func (s *historyService) GetHistoryById(ctx context.Context, historyId string, u
 		Summary:          history.Summary,
 	}, nil
 }
+

@@ -2,7 +2,7 @@ package dto
 
 import (
 	"errors"
-	"ulascan-be/entity"
+	"review_product_tokopedia_be/entity"
 
 	"github.com/google/uuid"
 )

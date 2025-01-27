@@ -3,7 +3,7 @@ package repository
 import (
 	"context"
 
-	"ulascan-be/entity"
+	"review_product_tokopedia_be/entity"
 
 	"gorm.io/gorm"
 )

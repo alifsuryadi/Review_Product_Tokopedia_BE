@@ -8,9 +8,9 @@ import (
 	"strings"
 	"sync"
 
-	"ulascan-be/dto"
-	"ulascan-be/service"
-	"ulascan-be/utils"
+	"review_product_tokopedia_be/dto"
+	"review_product_tokopedia_be/service"
+	"review_product_tokopedia_be/utils"
 
 	"github.com/gin-gonic/gin"
 	"github.com/google/uuid"
@@ -56,6 +56,7 @@ func NewMLController(
 // @Router /api/ml/guest/analysis [get]
 func (c *mlController) GetSentimentAnalysisAndSummarizationAsGuest(ctx *gin.Context) {
 	productUrl := ctx.Query("product_url")
+	fmt.Printf("Received product_url: %s\n", productUrl)
 	if productUrl == "" {
 		res := utils.BuildResponseFailed(dto.MESSAGE_FAILED_GET_REVIEWS, dto.ErrProductUrlMissing.Error(), nil)
 		ctx.AbortWithStatusJSON(http.StatusBadRequest, res)
@@ -94,6 +95,7 @@ func (c *mlController) GetSentimentAnalysisAndSummarizationAsGuest(ctx *gin.Cont
 	}
 
 	pathParts := strings.Split(parsedUrl.Path, "/")
+	fmt.Printf("Parsed Path: %+v\n", pathParts)
 	if len(pathParts) < 3 {
 		res := utils.BuildResponseFailed(dto.MESSAGE_FAILED_GET_REVIEWS, dto.ErrProductUrlWrongFormat.Error(), nil)
 		ctx.AbortWithStatusJSON(http.StatusBadRequest, res)
@@ -179,7 +181,9 @@ func (c *mlController) GetSentimentAnalysisAndSummarizationAsGuest(ctx *gin.Cont
 
 	go func() {
 		defer wg.Done()
+		fmt.Println("Sending data to ML service...")
 		predictResult, predictErr = c.modelService.Predict(ctx, predictReq)
+		fmt.Printf("ML Service Response: %+v, Error: %v\n", predictResult, predictErr)
 	}()
 
 	go func() {
@@ -250,6 +254,7 @@ func (c *mlController) GetSentimentAnalysisAndSummarizationAsGuest(ctx *gin.Cont
 // @Router /api/ml/analysis [get]
 func (c *mlController) GetSentimentAnalysisAndSummarization(ctx *gin.Context) {
 	productUrl := ctx.Query("product_url")
+	fmt.Printf("Received product_url: %s\n", productUrl)
 	if productUrl == "" {
 		res := utils.BuildResponseFailed(dto.MESSAGE_FAILED_GET_REVIEWS, dto.ErrProductUrlMissing.Error(), nil)
 		ctx.AbortWithStatusJSON(http.StatusBadRequest, res)
@@ -288,6 +293,7 @@ func (c *mlController) GetSentimentAnalysisAndSummarization(ctx *gin.Context) {
 	}
 
 	pathParts := strings.Split(parsedUrl.Path, "/")
+	fmt.Printf("Parsed Path: %+v\n", pathParts)
 	if len(pathParts) < 3 {
 		res := utils.BuildResponseFailed(dto.MESSAGE_FAILED_GET_REVIEWS, dto.ErrProductUrlWrongFormat.Error(), nil)
 		ctx.AbortWithStatusJSON(http.StatusBadRequest, res)
@@ -373,7 +379,9 @@ func (c *mlController) GetSentimentAnalysisAndSummarization(ctx *gin.Context) {
 
 	go func() {
 		defer wg.Done()
+		fmt.Println("Sending data to ML service...")
 		predictResult, predictErr = c.modelService.Predict(ctx, predictReq)
+		fmt.Printf("ML Service Response: %+v, Error: %v\n", predictResult, predictErr)
 	}()
 
 	go func() {
@@ -433,6 +441,7 @@ func (c *mlController) GetSentimentAnalysisAndSummarization(ctx *gin.Context) {
 		return
 	}
 
+
 	history := dto.HistoryCreateRequest{
 		UserID:           userUUID,
 		ProductID:        product.ProductId,
@@ -477,6 +486,7 @@ func (c *mlController) GetSentimentAnalysisAndSummarization(ctx *gin.Context) {
 }
 
 func expandUrl(shortUrl string) (string, error) {
+	fmt.Printf("Expanding URL: %s\n", shortUrl)
 	client := &http.Client{
 		CheckRedirect: func(req *http.Request, via []*http.Request) error {
 			// Prevent the default redirect behavior to handle it manually

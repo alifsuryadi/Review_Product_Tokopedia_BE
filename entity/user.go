@@ -1,7 +1,7 @@
 package entity
 
 import (
-	"ulascan-be/utils"
+	"review_product_tokopedia_be/utils"
 
 	"github.com/google/uuid"
 	"gorm.io/gorm"

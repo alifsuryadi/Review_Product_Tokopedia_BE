@@ -3,7 +3,7 @@ package database
 import (
 	"fmt"
 
-	"ulascan-be/database/seeds"
+	"review_product_tokopedia_be/database/seeds"
 
 	"gorm.io/gorm"
 )

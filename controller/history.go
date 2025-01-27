@@ -4,9 +4,9 @@ import (
 	"net/http"
 	"strconv"
 
-	"ulascan-be/dto"
-	"ulascan-be/service"
-	"ulascan-be/utils"
+	"review_product_tokopedia_be/dto"
+	"review_product_tokopedia_be/service"
+	"review_product_tokopedia_be/utils"
 
 	"github.com/gin-gonic/gin"
 )

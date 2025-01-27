@@ -3,15 +3,15 @@ package main
 import (
 	"fmt"
 	"os"
-	"ulascan-be/config"
-	"ulascan-be/constants"
-	"ulascan-be/controller"
-	"ulascan-be/database"
-	_ "ulascan-be/docs"
-	"ulascan-be/middleware"
-	"ulascan-be/repository"
-	"ulascan-be/routes"
-	"ulascan-be/service"
+	"review_product_tokopedia_be/config"
+	"review_product_tokopedia_be/constants"
+	"review_product_tokopedia_be/controller"
+	"review_product_tokopedia_be/database"
+	_ "review_product_tokopedia_be/docs"
+	"review_product_tokopedia_be/middleware"
+	"review_product_tokopedia_be/repository"
+	"review_product_tokopedia_be/routes"
+	"review_product_tokopedia_be/service"
 
 	"github.com/gin-gonic/gin"
 	"gorm.io/gorm"
@@ -20,7 +20,7 @@ import (
 	ginSwagger "github.com/swaggo/gin-swagger"
 )
 
-// @title UlaScan BE API
+// @title Review Product Tokopedia BE API
 // @version 1.2
 // @description All provided API for Ulascan APP.
 // @termsOfService http://swagger.io/terms/

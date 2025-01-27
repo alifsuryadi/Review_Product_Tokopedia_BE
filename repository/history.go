@@ -4,8 +4,8 @@ import (
 	"context"
 	"strings"
 
-	"ulascan-be/dto"
-	"ulascan-be/entity"
+	"review_product_tokopedia_be/dto"
+	"review_product_tokopedia_be/entity"
 
 	"gorm.io/gorm"
 )

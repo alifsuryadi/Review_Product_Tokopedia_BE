@@ -4,8 +4,8 @@ import (
 	"net/http"
 	"strings"
 
-	"ulascan-be/service"
-	"ulascan-be/utils"
+	"review_product_tokopedia_be/service"
+	"review_product_tokopedia_be/utils"
 
 	"github.com/gin-gonic/gin"
 )

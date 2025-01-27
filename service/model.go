@@ -9,7 +9,7 @@ import (
 	"net/http"
 	"os"
 
-	"ulascan-be/dto"
+	"review_product_tokopedia_be/dto"
 )
 
 type (

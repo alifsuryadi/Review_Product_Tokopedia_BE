@@ -1,4 +1,4 @@
-module ulascan-be
+module review_product_tokopedia_be
 
 go 1.21.6
 

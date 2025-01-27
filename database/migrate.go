@@ -1,7 +1,7 @@
 package database
 
 import (
-	"ulascan-be/entity"
+	"review_product_tokopedia_be/entity"
 
 	"gorm.io/gorm"
 )

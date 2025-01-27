@@ -374,7 +374,7 @@ var SwaggerInfo = &swag.Spec{
 	Host:             "",
 	BasePath:         "",
 	Schemes:          []string{},
-	Title:            "UlaScan BE API",
+	Title:            "Review Product Tokopedia BE API",
 	Description:      "All provided API for Ulascan APP.",
 	InfoInstanceName: "swagger",
 	SwaggerTemplate:  docTemplate,

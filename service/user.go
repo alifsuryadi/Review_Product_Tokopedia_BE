@@ -3,11 +3,11 @@ package service
 import (
 	"context"
 
-	"ulascan-be/constants"
-	"ulascan-be/dto"
-	"ulascan-be/entity"
-	"ulascan-be/repository"
-	"ulascan-be/utils"
+	"review_product_tokopedia_be/constants"
+	"review_product_tokopedia_be/dto"
+	"review_product_tokopedia_be/entity"
+	"review_product_tokopedia_be/repository"
+	"review_product_tokopedia_be/utils"
 )
 
 type (

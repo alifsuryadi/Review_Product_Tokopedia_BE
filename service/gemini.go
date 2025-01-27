@@ -6,8 +6,8 @@ import (
 	"log"
 	"os"
 
-	"ulascan-be/constants"
-	"ulascan-be/dto"
+	"review_product_tokopedia_be/constants"
+	"review_product_tokopedia_be/dto"
 
 	"github.com/google/generative-ai-go/genai"
 	"google.golang.org/api/option"

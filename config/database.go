@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"os"
 
-	"ulascan-be/constants"
+	"review_product_tokopedia_be/constants"
 
 	"github.com/joho/godotenv"
 	"gorm.io/driver/postgres"

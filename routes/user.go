@@ -1,9 +1,9 @@
 package routes
 
 import (
-	"ulascan-be/controller"
-	"ulascan-be/middleware"
-	"ulascan-be/service"
+	"review_product_tokopedia_be/controller"
+	"review_product_tokopedia_be/middleware"
+	"review_product_tokopedia_be/service"
 
 	"github.com/gin-gonic/gin"
 )
