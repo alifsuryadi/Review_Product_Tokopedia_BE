@@ -1,8 +1,8 @@
 [![Deploy to GCE](https://github.com/Ulas-Scan/UlaScan_BE/actions/workflows/deploy.yml/badge.svg?branch=main)](https://github.com/Ulas-Scan/UlaScan_BE/actions/workflows/deploy.yml)
 
-# Backend for Ulascan: Bangkit 2024 Capstone Project
+# Backend for Review Product Tokopedia BE
 
-Welcome to the backend repository for the Ulascan: Bangkit 2024 Batch 6 capstone project! This backend serves the mobile app for our project. It is a backend service built using Gin, Golang, and GORM.
+Welcome to the backend repository for the Review Product Tokopedia BE! This backend serves the streamlit app for my project. It is a backend service built using Gin, Golang, and GORM.
 
 ## API Documentation
 
