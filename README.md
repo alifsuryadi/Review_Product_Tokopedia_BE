@@ -6,7 +6,7 @@ Welcome to the backend repository for the Review Product Tokopedia BE! This back
 
 ## API Documentation
 
-The API documentation for this project can be found [here](https://www.postman.com/supply-administrator-61638669/workspace/ulascan/folder/36341500-c7118b3a-2f29-4fcd-9e08-9641cf52d5a8) or [Swagger](http://34.101.79.15/swagger/index.html).
+The API documentation for this project can be found [here](https://documenter.getpostman.com/view/41080390/2sB3HetNim) or [Swagger](http://34.101.79.15/swagger/index.html).
 
 ## Backend and Cloud Architecture
 
